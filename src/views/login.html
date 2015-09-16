@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kinvey Social Connect</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form ng-submit="vm.login(vm.username, vm.password);">
+        <h4 class="text-center">Username and Password Login</h4>
+        <div class="form-group">
+          <label for="usernameInput">Username</label>
+          <input type="text" class="form-control" id="usernameInput" placeholder="Username" ng-model="vm.username">
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" id="passwordInput" placeholder="Password" ng-model="vm.password">
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h4 class="text-center">Social Identity Login</h4>
+
+      <p class="text-center">
+        <button type="button" class="btn btn-facebook" ng-click="vm.loginWithFacebook();">
+          <i class="fa fa-facebook"></i> Login with Facebook
+        </button>
+      </p>
+
+      <p class="text-center">
+        <button type="button" class="btn btn-twitter" ng-click="vm.loginWithTwitter();">
+          <i class="fa fa-twitter"></i> Login with Twitter
+        </button>
+      </p>
+
+      <!-- <p class="text-center">
+        <button type="button" class="btn btn-linkedin" ng-click="vm.loginWithLinkedIn();">
+          <i class="fa fa-linkedin"></i> Login with LinkedIn
+        </button>
+      </p> -->
+    </div>
+  </div>
+</div>

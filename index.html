@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="Connect">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Kinvey Connect</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div ui-view></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+        <script src="//da189i1jfloii.cloudfront.net/js/kinvey-angular-1.5.1.js"></script>
+
+        <!-- Modules -->
+        <script src="/src/js/modules/config.js"></script>
+        <script src="/src/js/modules/controllers.js"></script>
+
+        <!-- Controllers -->
+        <script src="/src/js/controllers/active.js"></script>
+        <script src="/src/js/controllers/login.js"></script>
+        <script src="/src/js/controllers/welcome.js"></script>
+
+        <!-- App -->
+        <script src="/src/js/app.js"></script>
+
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId: '540411052764485',
+              xfbml: true,
+              version: 'v2.4'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </body>
+</html>
