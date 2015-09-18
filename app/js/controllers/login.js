@@ -19,15 +19,33 @@ angular.module('controllers').controller('LoginController', ['$q', '$log', '$kin
         }
 
         FB.login(function(response) {
-          deferred.resolve(response.authResponse);
+          if (response.status === 'connected') {
+            deferred.resolve(response.authResponse);
+          }
+          else if (response.status === 'not_authorized') {
+            return deferred.reject(new Error('The user did not authorized the application to connect to Facebook.'));
+          }
+          else {
+            return deferred.reject(new Error('Unable to connect to Facebook.'));
+          }
         });
       });
 
       return deferred.promise;
     }).then(function(authResponse) {
-      return $kinvey.User.loginWithProvider('facebook', {
+      var provider = 'facebook';
+      var tokens = {
         'access_token': authResponse.accessToken,
         'expires_in': authResponse.expiresIn
+      };
+
+      return $kinvey.User.loginWithProvider(provider, tokens).then(null, function(err) {
+        // Attempt to signup as a new user if no user with the identity exists.
+        if ($kinvey.Error.USER_NOT_FOUND === err.name) {
+          return $kinvey.User.signupWithProvider(provider, tokens);
+        }
+
+        return $kinvey.Defer.reject(err);
       });
     }).then(function(user) {
       $log.debug('Successfully connected with Facebook.', user);

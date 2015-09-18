@@ -1,0 +1,32 @@
+{
+  "name": "socialconnect",
+  "version": "1.0.0",
+  "description": "A sample application demonstrating how to connect social identities with a Kinvey user.",
+  "scripts": {
+    "install": "node install.js",
+    "start": "node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinveyApps/SocialConnect-AngularJS.git"
+  },
+  "keywords": [
+    "Kinvey",
+    "Social",
+    "Facebook",
+    "Twitter"
+  ],
+  "author": "",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/KinveyApps/SocialConnect-AngularJS/issues"
+  },
+  "homepage": "https://github.com/KinveyApps/SocialConnect-AngularJS#readme",
+  "devDependencies": {
+    "chalk": "^1.1.1",
+    "node-static": "^0.7.7",
+    "opener": "^1.4.1",
+    "prompt": "^0.2.14"
+  }
+}

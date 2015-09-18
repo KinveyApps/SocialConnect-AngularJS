@@ -16,13 +16,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $stateProvider
     .state('welcome', {
       url: '/',
-      templateUrl: 'src/views/welcome.html',
+      templateUrl: 'app/views/welcome.html',
       controller: 'WelcomeController',
       controllerAs: 'vm'
     })
     .state('login', {
       url: '/login',
-      templateUrl: 'src/views/login.html',
+      templateUrl: 'app/views/login.html',
       controller: 'LoginController',
       controllerAs: 'vm'
     })
@@ -39,7 +39,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
     .state('active', {
       url: '/active',
-      templateUrl: 'src/views/active.html',
+      templateUrl: 'app/views/active.html',
       controller: 'ActiveController',
       controllerAs: 'vm',
       resolve: {
