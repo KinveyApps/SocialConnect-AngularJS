@@ -1,7 +1,7 @@
 {
   "name": "socialconnect",
   "version": "1.0.0",
-  "description": "A sample application demonstrating how to connect social identities with a Kinvey user.",
+  "description": "A sample application demonstrating how to connect social identities on the Kinvey platform.",
   "scripts": {
     "install": "node install.js",
     "start": "node start.js",
