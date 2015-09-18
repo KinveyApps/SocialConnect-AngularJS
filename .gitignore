@@ -2,5 +2,5 @@
 npm-debug.log
 node_modules/
 archive
-src/js/modules/config.js
+app/js/modules/config.js
 CHANGELOG.md
