@@ -22,6 +22,10 @@ A sample application demonstrating how to connect social identities on the Kinve
 
 ### Troubleshooting
 
+__I executed `npm install` but it failed. What do I do now?__
+
+1. You can simply execute the install script by running `node install.js` seperately. 
+
 __Why I am not able to login using a username and password?__
 
 1. Make sure you have created a user using the [Kinvey Console](http://console.kinvey.com) for your Kinvey application.
