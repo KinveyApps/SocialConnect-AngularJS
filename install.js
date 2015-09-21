@@ -35,7 +35,7 @@ prompt.get({
       default: 'https://baas.kinvey.com'
     },
     facebookAppId: {
-      description: 'What is your Facebook applications app id?',
+      description: 'What is your Facebook applications app id?'
     }
   }
 }, function(err, result) {
@@ -52,7 +52,7 @@ prompt.get({
     '  appKey: \'' + result.appKey + '\',\n' +
     '  appSecret: \'' + result.appSecret + '\',\n' +
     '  apiHostName: \'' + result.apiHostname + '\'\n' +
-    '});'\'\n' +
+    '});\n' +
     'window.facebookAppId = \'' + result.facebookAppId + '\'\n';
 
   // Write config file
